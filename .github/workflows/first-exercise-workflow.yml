@@ -5,7 +5,7 @@ jobs:
   shell-cmd-job:
     runs-on: ubuntu-latest
     steps:
-      - name: python —version
-        run: python —version
-      - name: pip —version 
-        run: pip —version
+      - name: Check Python Version
+        run: python --version
+      - name: Check pip version 
+        run: pip --version

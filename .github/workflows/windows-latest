@@ -1,0 +1,43 @@
+name: check shells
+on: [push]
+defaults:  # Workflow Level defaults
+  run:
+    shell: bash
+jobs:
+  check-uname:
+    runs-on: windows-latest
+    steps:
+      - name: 시스템정보출력
+        run: |
+          uname -a
+defaults:  # Workflow Level defaults
+  run:
+    shell: pwsh
+jobs:
+  check-cpu:
+    runs-on: windows-latest
+    steps:
+      - name: cpu info
+        run: |
+          Get-ComputerInfo
+defaults:  # Workflow Level defaults
+  run:
+    shell: python
+jobs:
+  check-sysversion:
+    runs-on: windows-latest
+    steps:
+      - name: sys version
+        run: | 
+          import platform 
+          print(sys.version)
+defaults:  # Workflow Level defaults
+  run:
+    shell: node
+jobs:
+  check-process version:
+    runs-on: windows-latest
+    steps:
+      - name: process version
+        run: |
+            console.log(process.version)
